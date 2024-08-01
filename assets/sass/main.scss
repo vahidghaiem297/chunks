@@ -1,0 +1,433 @@
+// General styles
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden !important;
+    font-family: 'Bainsley', sans-serif;
+    direction: ltr;
+    background: white;
+    transition: background .9s ease;
+    /* Smooth background transition */
+}
+
+.list-unstyled {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+// hero section
+
+.hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
+
+    .hidden-xs {
+        display: block;
+    }
+
+    img {
+        position: absolute;
+    }
+
+    #bg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+
+    #rock-right {
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        transform: translate3d(0, 0, 0);
+        max-width: 300px;
+    }
+
+    #man {
+        left: 0;
+        bottom: 0;
+        z-index: 3;
+        transform: translate3d(0, 0, 0);
+        max-width: 500px;
+    }
+
+    #mountain {
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        transform: translate3d(0, 0, 0);
+        max-width: 600px
+    }
+
+    #forest-right {
+        left: 50%;
+        bottom: 0;
+        z-index: 1;
+        transform: translate3d(0, 100%, 0);
+    }
+
+    #forest-left {
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+        transform: translate3d(0, 100%, 0);
+        max-width: 700px;
+    }
+
+    &__typewrap {
+        position: absolute;
+        z-index: 2;
+        left: 50%;
+        top: 200px;
+        color: #000;
+        text-transform: capitalize;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 500px;
+
+
+        h1 {
+            min-width: 500px;
+            font-size: 30px;
+            text-transform: uppercase;
+        }
+
+        .typed {
+            color: #5F2D4A;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 35px;
+        }
+    }
+
+    .menu {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        li {
+            a {
+                color: #fff;
+                font-size: 14px;
+                min-width: 80px;
+                height: 30px;
+                padding: 5px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(0, 0, 0, .4);
+                font-weight: bold;
+                border-radius: 5px;
+                margin: 0 5px;
+            }
+        }
+    }
+
+    .socials {
+        position: absolute;
+        top: 40%;
+        transform: translateY(-50%);
+        left: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        z-index: 4;
+        justify-content: center;
+
+        li {
+            a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(0, 0, 0, .4);
+                font-weight: bold;
+                border-radius: 5px;
+                margin: 5px 0;
+                padding: 5px;
+
+                svg {
+                    path {
+                        fill: #fff;
+
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+
+
+.identity {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: #422B26;
+
+    .clouds {
+        position: absolute;
+        z-index: 1;
+
+        &.right.top {
+            left: 0;
+            top: 50%;
+            right: auto;
+            animation: moveCloudsForthAndBack 200s linear infinite alternate;
+        }
+
+        &.center.top {
+            left: 50%;
+            top: 50%;
+            right: auto;
+            animation: moveCloudsForthAndBack 100s linear infinite alternate;
+        }
+
+        &.bottom.left {
+            left: 0;
+            top: auto;
+            bottom: 20px;
+            right: auto;
+            animation: moveCloudsForthAndBack 300s linear infinite alternate;
+        }
+
+
+    }
+
+    .identityInner {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 30px;
+
+
+
+        &__title {
+            text-align: center;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            font-size: 40px;
+            color: #fff;
+            position: relative;
+            z-index: 2;
+
+            .name {
+                color: #fff;
+                font-weight: bold;
+                font-size: 50px;
+            }
+        }
+
+        &__text {
+            font-size: 14px;
+            color: #fff;
+            text-transform: capitalize;
+            text-align: center;
+            max-width: 500px;
+            margin-right: auto;
+            margin-left: auto;
+            position: relative;
+            z-index: 2;
+            margin-bottom: 10px;
+
+            .info {
+                font-size: 40px;
+                text-transform: capitalize;
+            }
+        }
+
+
+
+        h2 {
+            color: #fff;
+            font-weight: 400;
+            font-size: 16px;
+            margin-top: 10px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .mouse {
+            margin: 0 auto;
+            display: block;
+            border-radius: 50px;
+            border: 2px solid #fff;
+            height: 50px;
+            width: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .move {
+            position: absolute;
+            background-color: #fff;
+            height: 8px;
+            width: 8px;
+            border-radius: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: move 2s linear infinite;
+        }
+
+
+    }
+
+    .characterWrap {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+
+}
+
+
+.drawSec {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+    position: relative;
+    overflow: hidden;
+
+    .line-container {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        text-align: center;
+        padding: 100px 0;
+
+        svg {
+            display: inline-block;
+            transform: scaleX(-1);
+            position: absolute;
+            height: 100%;
+            top: 0;
+            right: 0;
+        }
+
+
+    }
+
+    .paper-plane {
+        height: 100px;
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        object-fit: cover;
+    }
+
+    .scrollMoreText {
+        text-align: center;
+        font-size: 60px;
+        color: #422B26;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+
+
+
+@keyframes moveCloudsBackAndForth {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(80vw);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveCloudsForthAndBack {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(80vw);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes move {
+    0% {
+        transform: translate(-50%, 10px);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translate(-50%, 20px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, 30px);
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .paper-plane {
+        height: 100px;
+        position: absolute;
+        top: 100%;
+        left: 0%;
+
+    }
+
+
+}
+
+@media screen and (max-width:767px) {
+    .hidden-xs {
+        display: none !important;
+    }
+
+    .hero {
+        background-image: url(../img/mobile-background.jpg);
+        background-repeat: no-repeat;
+
+    }
+
+    .identityInner__title .name {
+        font-size: 30px !important;
+    }
+
+    .hero__typewrap {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        min-width: 100%;
+        padding-left: 20px;
+    }
+}
